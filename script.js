@@ -88,9 +88,9 @@ for (const btn of allBtn) {
 /////////////////////////COPUN ///////////////////////////////
 
 const upgradebtn= document.getElementById("disable-btn");
-    upgradebtn.addEventListener("click",function(){
+    upgradebtn.addEventListener("click",function(e){
 
-
+        e.preventDefault();
 
     const cupon1 = document.getElementById('cupon1').innerText;
     const cupon2 = document.getElementById('cupon2').innerText;
@@ -129,10 +129,23 @@ const upgradebtn= document.getElementById("disable-btn");
 
 
 /////////////////////////////////////////////////
+const openmodal = document.getElementById('openmodel');
 
+openmodal.addEventListener('click',function(e){
+    e.preventDefault();
+    const modals = document.getElementById('modal');
+    modals.classList.remove("hidden");
 
+})
 
+const closemodel = document.getElementById('closemodel');
 
+closemodel.addEventListener('click',function(e){
+    e.preventDefault();
+    const modals = document.getElementById('modal');
+    modals.classList.add("hidden");
+
+})
 
 
 
